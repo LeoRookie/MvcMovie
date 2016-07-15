@@ -44,9 +44,7 @@ namespace MvcMovie.Models {
             set {genre = value;}
         }
 
-        [Range(1, 100)]
-        [DataType(DataType.Currency)]
-        [DisplayFormat(DataFormatString ="{0:C}", ApplyFormatInEditMode = true)]
+        [Range(1, 100), DataType(DataType.Currency), DisplayFormat(DataFormatString ="{0:C}", ApplyFormatInEditMode = false)]
         public decimal Price {
             get {
                 if (price > 0) {
